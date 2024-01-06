@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hrmpy"
+version = "0.1"
+authors = [
+    { name = "Satrio Wibowo", email = "satrio.biology@yahoo.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+description = "A package to handle HRM data"
+keywords = []
+dependencies = []

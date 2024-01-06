@@ -1,0 +1,30 @@
+# Ignore Python bytecode files, build directories, and egg-info
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyzw
+*.pyo
+*.pyw
+*.pyz
+*.egg-info/
+dist/
+build/
+__hatchling__/
+
+# Ignore virtual environment
+venv/
+
+# Ignore local development settings
+*.env
+
+# Ignore Hatchling artifacts
+.hatchling/
+
+# Ignore generated files
+obf/
+
+# Ignore release
+release/
+*.zip
