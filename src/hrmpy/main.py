@@ -65,8 +65,24 @@ class HRM():
         Returns:
         - DataFrame, differences between consecutive normalized data points.
         """
-        data = self.normal()
+        data = self.normal()*-1
         return data.diff()
+    
+    def tm(self):
+        """
+        Calculate melting temperature (Tm) for each sample.
+
+        Args:
+        - df (DataFrame): Input DataFrame with 'temperature' column and sample columns.
+
+        Returns:
+        - DataFrame: A new DataFrame with the melting temperature for each sample.
+        """
+        df = pd.concat([self.temp, self.diff()], axis=1)
+        tm = df.set_index('Temperature').idxmax()
+        tm = tm.reset_index()
+        tm.columns = ['Sample', 'Temperature']
+        return tm 
 
     def sub(self, ref):
         """
