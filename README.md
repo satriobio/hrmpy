@@ -5,12 +5,12 @@ A simple python package to handle High Resolution Melting (HRM) experiment data 
 Install dependencies
 ```
 pip install -r requirements.txt
-pip install hrmpy
+pip install hrmpython
 ```
 
 Create simple visulization with clustering
 ```
-from hrmpy import HRM
+from hrmpython import HRM
 import pandas as pd
 import matplotlib.pyplot as plt
 
